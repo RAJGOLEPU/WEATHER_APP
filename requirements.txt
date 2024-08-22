@@ -1,0 +1,4 @@
+Flask
+joblib
+gunicorn
+# Add other dependencies like scikit-learn if needed

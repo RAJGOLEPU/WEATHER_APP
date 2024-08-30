@@ -11,10 +11,19 @@
         <h1>The Ultimate Weather App</h1>
         <nav>
             <button id="homeBtn">Home</button>
-            <select id="locationSelect">
-                <option value="new-york">New York</option>
-                <option value="los-angeles">Los Angeles</option>
-                <option value="chicago">Chicago</option>
+            <select id="location" name="location">
+                {% set locations = [
+                    'Adilabad', 'Bhadradri Kothagudem', 'Hanumakonda', 'Hyderabad', 'Jagtial',
+                    'Jangaon', 'Jayashankar', 'Jogulamba Gadwal', 'Kamareddy', 'Karimnagar',
+                    'Khammam', 'Kumuram Bheem', 'Mahabubabad', 'Mahabubnagar', 'Mancherial',
+                    'Medak', 'Medchal-Malkajgiri', 'Mulugu', 'Nagarkurnool', 'Nalgonda',
+                    'Narayanpet', 'Nirmal', 'Nizamabad', 'Peddapalli', 'Rajanna Sircilla',
+                    'Rangareddy', 'Sangareddy', 'Siddipet', 'Suryapet', 'Vikarabad',
+                    'Wanaparthy', 'Warangal', 'Yadadri Bhuvanagiri'
+                ] %}
+                {% for location in locations %}
+                    <option value="{{ location }}">{{ location }}</option>
+                {% endfor %}
             </select>
         </nav>
     </header>

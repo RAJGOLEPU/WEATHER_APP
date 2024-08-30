@@ -1,4 +1,6 @@
-def predict_weather(location):
-    # Return dummy weather data
-    # You can customize this to return different dummy values based on input
-    return f"The weather in {location} is sunny with a temperature of 35°C."
+import pickle
+
+def load_model():
+    with open('model/improved_weather_temperature_model.pkl', 'rb') as model_file:
+        model = pickle.load(model_file)
+    return model
